@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *userOutput;
+@property (strong, nonatomic) IBOutlet UITextField *userInput;
 
+- (IBAction)setOutput:(id)sender;
 
 @end
 
