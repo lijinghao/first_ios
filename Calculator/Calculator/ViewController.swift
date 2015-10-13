@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     var userIsTheMiddleOfTypingANumber: Bool = false;
     
+    var brain = CalculatorBrain()
+    
     @IBAction func appendDigit(sender: UIButton) {
         let digit = sender.currentTitle!;
         if userIsTheMiddleOfTypingANumber {
@@ -26,19 +28,22 @@ class ViewController: UIViewController {
         
     }
     
+    /*
     @IBAction func operate(sender: UIButton) {
-        let operation = sender.currentTitle!;
         if userIsTheMiddleOfTypingANumber {
             enter();
         }
-        switch operation {
+        if let operation = sender.currentTitle {
+            switch operation {
             case "×":   peformOperation { $0 * $1 }
             case "÷":   peformOperation { $1 / $0 }
             case "+":   peformOperation { $0 + $1 }
             case "-":   peformOperation { $1 - $0 }
             case "√":   peformSqrt { sqrt($0) }
             default:break;
+            }
         }
+
     }
     
     func peformOperation(operation: (Double, Double) -> Double){
@@ -56,12 +61,35 @@ class ViewController: UIViewController {
     }
     
     var  operandStack = Array<Double>();
+    */
+    
+    @IBAction func operate(sender: UIButton) {
+        if userIsTheMiddleOfTypingANumber {
+            enter();
+        }
+        if let operation = sender.currentTitle {
+            if let result = brain.performOperation(operation) {
+                dispalyValue = result
+            }else{
+                dispalyValue = 0
+            }
+        }
+        
+    }
+    
+    
     
     @IBAction func enter() {
         userIsTheMiddleOfTypingANumber = false;
-        operandStack.append(dispalyValue);
-        println("operandStack = \(operandStack)");//此句会调用get方法
+        //operandStack.append(dispalyValue);
+        //print("operandStack = \(operandStack)");//此句会调用get方法
         //dispalyValue = 1;//此句会调用set方法
+        
+        if let result = brain.pushOperand(dispalyValue) {
+            dispalyValue = result
+        }else{
+            dispalyValue = 0
+        }
         
     }
     
@@ -73,7 +101,7 @@ class ViewController: UIViewController {
         set {
             //println("haha");
             display.text = "\(newValue)";
-            userIsTheMiddleOfTypingANumber = false;
+            //userIsTheMiddleOfTypingANumber = false;
         }
     }
 

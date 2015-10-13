@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39AB8F7E1BCD5417007B0481 /* CalcaulatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AB8F7D1BCD5417007B0481 /* CalcaulatorBrain.swift */; settings = {ASSET_TAGS = (); }; };
 		39BDEF001BB2FC740007598C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BDEEFF1BB2FC740007598C /* AppDelegate.swift */; };
 		39BDEF021BB2FC740007598C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BDEF011BB2FC740007598C /* ViewController.swift */; };
 		39BDEF051BB2FC740007598C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BDEF031BB2FC740007598C /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39AB8F7D1BCD5417007B0481 /* CalcaulatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalcaulatorBrain.swift; sourceTree = "<group>"; };
 		39BDEEFA1BB2FC740007598C /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BDEEFE1BB2FC740007598C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39BDEEFF1BB2FC740007598C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				39BDEF011BB2FC740007598C /* ViewController.swift */,
 				39BDEF031BB2FC740007598C /* Main.storyboard */,
+				39AB8F7D1BCD5417007B0481 /* CalcaulatorBrain.swift */,
 				39BDEEFD1BB2FC740007598C /* Supporting Files */,
 			);
 			path = Calculator;
@@ -156,7 +159,9 @@
 		39BDEEF21BB2FC740007598C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = lijinghao;
 				TargetAttributes = {
 					39BDEEF91BB2FC740007598C = {
@@ -214,6 +219,7 @@
 			files = (
 				39BDEF021BB2FC740007598C /* ViewController.swift in Sources */,
 				39BDEF001BB2FC740007598C /* AppDelegate.swift in Sources */,
+				39AB8F7E1BCD5417007B0481 /* CalcaulatorBrain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +282,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -345,6 +352,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lingzhao Mao (SNS9L7K9T7)";
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iosdev.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a69c6df2-2ed4-441b-9586-f548615613fc";
 			};
@@ -357,6 +365,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lingzhao Mao (SNS9L7K9T7)";
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iosdev.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a69c6df2-2ed4-441b-9586-f548615613fc";
 			};
@@ -376,6 +385,7 @@
 				);
 				INFOPLIST_FILE = CalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lijinghao.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calculator.app/Calculator";
 			};
@@ -391,6 +401,7 @@
 				);
 				INFOPLIST_FILE = CalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lijinghao.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calculator.app/Calculator";
 			};
